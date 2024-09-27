@@ -120,3 +120,9 @@ h1 {
         font-size: 3vh;
      }
 }
+
+@media (max-width: 550px) {
+    .time-unit span {
+        font-size: 2vh;
+     }
+}
