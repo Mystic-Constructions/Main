@@ -5,11 +5,11 @@
 
     <link rel="icon" type="image/x-icon" href="Images/Logo.png">
     <link rel="stylesheet 1" href="CSS/Main.css">
-    <link rel="stylesheet 2" href="CSS/Error.css">
+    <link rel="stylesheet 2" href="CSS/Home.css">
 
     <script src="JavaScript/Main.js"></script>
 
-    <title>Error</title>
+    <title>Vinterstaden RP</title>
 </head>
 <body>
     <header class="background-header"></header>
@@ -25,7 +25,7 @@
 
         <div class="maintext">
             <ul class="links">
-                <li><a href="Hjem.html" class="underline">Hjem</a></li>
+                <li><a href="Hjem.html" class="disabled">Hjem</a></li>
                 <li><a href="Om.html" class="underline">Om</a></li>
                 <li><a href="Søknader.html" class="underline">Søknader</a></li>
                 <li><a href="Regelverket.html" class="underline">Regelverket</a></li>
@@ -41,7 +41,7 @@
     </div>
 
     <div class="dropdown_menu">
-        <li><a href="Hjem.html" class="underline">Hjem</a></li>
+        <li><a href="Hjem.html" class="disabled">Hjem</a></li>
         <li><a href="Om.html" class="underline">Om</a></li>
         <li><a href="Søknader.html" class="underline">Søknader</a></li>
         <li><a href="Regelverket.html" class="underline">Regelverket</a></li>
@@ -53,13 +53,17 @@
 
     <main>
         <section id="main">
-            <h1>Feil!</h1>
-            <h2>Kontakt brukerstøtten hvis dette fortsetter å skje.</h2>
-            <h3 id="countdown">Du vil bli omdirigert til <strong>front siden</strong> om 5 sekunder.</h3>
+            <h1>Hei, velkommen! 😊</h1>
+            <p><strong>Vinterstaden er et vakkert sted i Nord-Norge.
+<br>
+            <br>ANSVARSFRASKRIVELSE: Vinterstaden er ikke et reelt sted og derfor kan vi gjøre ting utenfor bøkene.</strong></p>
+           <button class="join" onclick="Join()">Join</button>
         </section>
     </main>
-    
-     <div class="social-container">
+
+    <iframe width="75%" height="75%" src="https://www.youtube.com/embed/_wieoc9m1t8?si=3iGhNWYsdF6D7YwV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <div class="social-container">
         <img src="Images/YT.png" alt="" onclick="YouTube()" class="social">
         <img src="Images/Tiktok.png" alt="" onclick="TikTok()" class="social">
         <img src="Images/Discord.png" alt="" onclick="Discord()" class="social">
@@ -67,22 +71,6 @@
     <p class="copyright">Copyright 2024 Vinterstaden RP. All rights reserved.</p>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const textElement = document.getElementById("countdown");
-
-            let countdown = 5;
-
-            const interval = setInterval(() => {
-                countdown--;
-                textElement.innerHTML = `Du vil bli omdirigert til front siden om ${countdown} sekunder.`;
-
-                if (countdown <= 0) {
-                    clearInterval(interval);
-                    window.location.href = "Home.html";
-                }
-            }, 1000);
-        });
-
         const toggleBtn = document.querySelector(".toggle_btn")
         const dropDownMenu = document.querySelector(".dropdown_menu")
         

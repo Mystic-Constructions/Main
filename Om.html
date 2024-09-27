@@ -5,11 +5,11 @@
 
     <link rel="icon" type="image/x-icon" href="Images/Logo.png">
     <link rel="stylesheet 1" href="CSS/Main.css">
-    <link rel="stylesheet 2" href="CSS/Error.css">
+    <link rel="stylesheet 2" href="CSS/About.css">
 
     <script src="JavaScript/Main.js"></script>
 
-    <title>Error</title>
+    <title>Om</title>
 </head>
 <body>
     <header class="background-header"></header>
@@ -26,7 +26,7 @@
         <div class="maintext">
             <ul class="links">
                 <li><a href="Hjem.html" class="underline">Hjem</a></li>
-                <li><a href="Om.html" class="underline">Om</a></li>
+                <li><a href="Om.html" class="disabled">Om</a></li>
                 <li><a href="Søknader.html" class="underline">Søknader</a></li>
                 <li><a href="Regelverket.html" class="underline">Regelverket</a></li>
                 <li><a href="Kontakt.html" class="underline">Kontakt</a></li>
@@ -42,7 +42,7 @@
 
     <div class="dropdown_menu">
         <li><a href="Hjem.html" class="underline">Hjem</a></li>
-        <li><a href="Om.html" class="underline">Om</a></li>
+        <li><a href="Om.html" class="disabled">Om</a></li>
         <li><a href="Søknader.html" class="underline">Søknader</a></li>
         <li><a href="Regelverket.html" class="underline">Regelverket</a></li>
         <li><a href="Kontakt.html" class="underline">Kontakt</a></li>
@@ -53,36 +53,36 @@
 
     <main>
         <section id="main">
-            <h1>Feil!</h1>
-            <h2>Kontakt brukerstøtten hvis dette fortsetter å skje.</h2>
-            <h3 id="countdown">Du vil bli omdirigert til <strong>front siden</strong> om 5 sekunder.</h3>
+            <h1>Om oss</h1>
+            <p><strong>Vinterstaden RP er en norsk rollespillserver som skiller seg ut med sitt fokus på høy kvalitet og grundig rollebeskrivelse.
+                <br>På denne serveren er det ikke bare viktig å spille en karakter, men å leve seg inn i en rik og detaljert fiktiv verden.Spillere blir invitert til å utforske og bidra til en dynamisk historie gjennom engasjerende roller og komplekse narrativer.
+                <br>Med vekt på realistisk interaksjon og autentiske karakterer, er Interstaden RP dedikert til å tilby en immersiv opplevelse der hver beslutning og handling har betydning. Dette gjør det til en plattform der både erfarne rollespillere og nybegynnere kan finne utfordringer og glede i å utvikle sine karakterer og historier i et levende og sammenkoblet fellesskap.
+            </strong>
+            </p>
+            <h1>Ofte stilte spørsmål</h1>
+            <div class="box">
+                <h2>Når kommer ny oppdatering?</h2>
+                <p>Nye oppdateringer kommer ettervært som de er <strong>klare</strong>!</p>
+                <br>
+            </div>
+
+            <div class="box">
+                <h2>Hvordan blir jeg mod?</h2>
+                <p>Får å bli mod så må du søke. Det kan du gjøre ved å trykke <strong>"Bli Med"</strong> knappen.</p>
+                <br>
+            </div>
         </section>
     </main>
-    
-     <div class="social-container">
+
+    <div class="social-container">
         <img src="Images/YT.png" alt="" onclick="YouTube()" class="social">
         <img src="Images/Tiktok.png" alt="" onclick="TikTok()" class="social">
         <img src="Images/Discord.png" alt="" onclick="Discord()" class="social">
     </div>
+
     <p class="copyright">Copyright 2024 Vinterstaden RP. All rights reserved.</p>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const textElement = document.getElementById("countdown");
-
-            let countdown = 5;
-
-            const interval = setInterval(() => {
-                countdown--;
-                textElement.innerHTML = `Du vil bli omdirigert til front siden om ${countdown} sekunder.`;
-
-                if (countdown <= 0) {
-                    clearInterval(interval);
-                    window.location.href = "Home.html";
-                }
-            }, 1000);
-        });
-
         const toggleBtn = document.querySelector(".toggle_btn")
         const dropDownMenu = document.querySelector(".dropdown_menu")
         

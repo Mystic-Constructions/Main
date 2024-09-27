@@ -5,11 +5,11 @@
 
     <link rel="icon" type="image/x-icon" href="Images/Logo.png">
     <link rel="stylesheet 1" href="CSS/Main.css">
-    <link rel="stylesheet 2" href="CSS/Error.css">
+    <link rel="stylesheet 2" href="CSS/Support.css">
 
     <script src="JavaScript/Main.js"></script>
 
-    <title>Error</title>
+    <title>Kontakt</title>
 </head>
 <body>
     <header class="background-header"></header>
@@ -29,7 +29,7 @@
                 <li><a href="Om.html" class="underline">Om</a></li>
                 <li><a href="Søknader.html" class="underline">Søknader</a></li>
                 <li><a href="Regelverket.html" class="underline">Regelverket</a></li>
-                <li><a href="Kontakt.html" class="underline">Kontakt</a></li>
+                <li><a href="Kontakt.html" class="disabled">Kontakt</a></li>
                 <li><a href="Nyheter.html" class="underline" id="news">Nyheter</a></li>
             </ul>
         </div>
@@ -45,7 +45,7 @@
         <li><a href="Om.html" class="underline">Om</a></li>
         <li><a href="Søknader.html" class="underline">Søknader</a></li>
         <li><a href="Regelverket.html" class="underline">Regelverket</a></li>
-        <li><a href="Kontakt.html" class="underline">Kontakt</a></li>
+        <li><a href="Kontakt.html" class="disabled">Kontakt</a></li>
         <li><a href="Nyheter.html" class="underline" id="news">Nyheter</a></li>
         <li><a href="BliMed.html" class="action_btn2">Bli Med</a></li>
         <li><a href="Error.html" class="action_btn">Login</a></li>
@@ -53,9 +53,21 @@
 
     <main>
         <section id="main">
-            <h1>Feil!</h1>
-            <h2>Kontakt brukerstøtten hvis dette fortsetter å skje.</h2>
-            <h3 id="countdown">Du vil bli omdirigert til <strong>front siden</strong> om 5 sekunder.</h3>
+            <h1>Kontakt</h1>
+
+            <div class="contact container">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                    <div class="contact-left-title">
+                        <h2>Ta kontakt.</h2>
+                        <hr>
+                    </div>
+                    <input type="hidden" name="access_key" value="a34d1e51-6acf-4d6c-af62-e4bae15d5da7">
+                    <input type="email" name="email" placeholder="E-Post" class="contact-inputs" kreves>
+                    <input type="text" name="name" placeholder="Subjekt" class="contact-inputs" kreves>
+                    <textarea name="message" placeholder="Melding" class="contact-inputs" kreves></textarea>
+                    <button type="submit">Send ➤</button>
+                </form>
+            </div>
         </section>
     </main>
     
@@ -67,22 +79,6 @@
     <p class="copyright">Copyright 2024 Vinterstaden RP. All rights reserved.</p>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const textElement = document.getElementById("countdown");
-
-            let countdown = 5;
-
-            const interval = setInterval(() => {
-                countdown--;
-                textElement.innerHTML = `Du vil bli omdirigert til front siden om ${countdown} sekunder.`;
-
-                if (countdown <= 0) {
-                    clearInterval(interval);
-                    window.location.href = "Home.html";
-                }
-            }, 1000);
-        });
-
         const toggleBtn = document.querySelector(".toggle_btn")
         const dropDownMenu = document.querySelector(".dropdown_menu")
         

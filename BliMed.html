@@ -5,11 +5,11 @@
 
     <link rel="icon" type="image/x-icon" href="Images/Logo.png">
     <link rel="stylesheet 1" href="CSS/Main.css">
-    <link rel="stylesheet 2" href="CSS/Error.css">
+    <link rel="stylesheet 2" href="CSS/JoinUs.css">
 
     <script src="JavaScript/Main.js"></script>
 
-    <title>Error</title>
+    <title>Join Us</title>
 </head>
 <body>
     <header class="background-header"></header>
@@ -53,9 +53,10 @@
 
     <main>
         <section id="main">
-            <h1>Feil!</h1>
-            <h2>Kontakt brukerstøtten hvis dette fortsetter å skje.</h2>
-            <h3 id="countdown">Du vil bli omdirigert til <strong>front siden</strong> om 5 sekunder.</h3>
+            <h1>Bli med oss</h1>
+            <h2>Bli med teamet vårt i dag! Vennligst fyll ut dette skjemaet.</h2>
+            <br>
+            <iframe src="https://docs.google.com/forms/d/1A5ifuw6Pd6vddd1PtHgOsOmmpGUfJAY5WQUR9JwGFmc/viewform?embedded=true" width="500" height="1775" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </section>
     </main>
     
@@ -67,22 +68,6 @@
     <p class="copyright">Copyright 2024 Vinterstaden RP. All rights reserved.</p>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const textElement = document.getElementById("countdown");
-
-            let countdown = 5;
-
-            const interval = setInterval(() => {
-                countdown--;
-                textElement.innerHTML = `Du vil bli omdirigert til front siden om ${countdown} sekunder.`;
-
-                if (countdown <= 0) {
-                    clearInterval(interval);
-                    window.location.href = "Home.html";
-                }
-            }, 1000);
-        });
-
         const toggleBtn = document.querySelector(".toggle_btn")
         const dropDownMenu = document.querySelector(".dropdown_menu")
         
