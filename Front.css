@@ -1,0 +1,392 @@
+#main {
+    text-align: left;
+}
+
+video {
+    margin-top: 100px;
+    border-radius: 10px;
+}
+
+#img1 {
+    border-radius: 5px;
+}
+
+h5 {
+    margin-top: -50px;
+    text-align: center;
+    color: rgb(255, 255, 40);
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow: visible;
+}
+
+#img1 {
+    width: 75px;
+    height: 75px;
+}
+
+#btn5 {
+    margin-left: 10px;
+    float: right;
+    background-color: rgb(255, 255, 40);
+    color: rgb(254, 100, 100);
+    width: 130px;
+    height: 40px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-width: 0px;
+    font-weight: 1000;
+    font-size: medium;
+}
+
+hr {
+    margin-top: 150px;
+    height: 10px;
+    background-color: rgb(254, 100, 100);
+    border: 0px;
+}
+
+h2 {
+    margin-top: 100px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(52, 252, 255);
+    font-size: 100px;
+}
+
+#txt1 {
+    text-align: center;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 75px;
+    color: rgb(254, 100, 100);
+    font-size: 25px;
+}
+
+body {
+    background-image: linear-gradient(lightgreen, lightpink);
+    background-size: 100% 100%;
+}
+
+h1 {
+    color: rgb(255, 255, 40);
+    margin: 0;
+    display: inline-block;
+}
+
+.center {
+    text-align: center;
+}
+
+#btn1 {
+    margin-left: 10px;
+    float: right;
+    background-color: rgb(254, 100, 100);
+    color: rgb(255, 255, 255);
+    width: 130px;
+    height: 40px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-width: 0px;
+    font-weight: 1000;
+    font-size: medium;
+}
+
+#btn2 {
+    background-color: rgb(87, 214, 87);
+    color: rgb(255, 255, 255);
+    width: 300px;
+    height: 100px;
+    border-radius: 25px;
+    border-width: 0px;
+    font-size: 75px;
+    font-weight: bold;
+}
+
+#btn2:hover {
+    background-color: rgb(87, 250, 87);
+    animation: spin 0.5s linear infinite;
+}
+
+#btn1:hover {
+    background-color: rgb(255, 255, 40);
+    color: rgb(254, 100, 100);
+    animation: shake 2s linear infinite;
+    animation-iteration-count: infinite;
+    transition: all .3s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes wiggles {
+
+    0%,
+    7% {
+        transform: rotateZ(0);
+    }
+
+    15% {
+        transform: rotateZ(-15deg);
+    }
+
+    20% {
+        transform: rotateZ(10deg);
+    }
+
+    25% {
+        transform: rotateZ(-10deg);
+    }
+
+    30% {
+        transform: rotateZ(6deg);
+    }
+
+    35% {
+        transform: rotateZ(-4deg);
+    }
+
+    40%,
+    100% {
+        transform: rotateZ(0);
+    }
+}
+
+/* Common styles for all screen sizes */
+html,
+body {
+    max-width: 100%;
+    overflow: visible;
+}
+
+body {
+    background-image: linear-gradient(lightgreen, lightpink);
+    background-size: 100% 100%;
+}
+
+h1 {
+    color: rgb(255, 255, 40);
+    margin: 0;
+    display: inline-block;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Styles for smaller screens */
+@media screen and (max-width: 1080px) {
+    #main {
+        text-align: center;
+    }
+
+    video {
+        margin-top: 50px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    h5 {
+        margin-top: -30px;
+        font-size: 30px;
+        text-align: center;
+        color: rgb(255, 255, 40);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #img1 {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+    }
+
+    #btn5 {
+        margin: 10px auto;
+        background-color: rgb(255, 255, 40);
+        color: rgb(254, 100, 100);
+        width: 100%;
+        height: 40px;
+        border-radius: 25px;
+        border-width: 0px;
+        font-weight: 1000;
+        font-size: medium;
+    }
+
+    hr {
+        margin-top: 50px;
+        height: 10px;
+        background-color: rgb(254, 100, 100);
+        border: 0px;
+    }
+
+    h2 {
+        margin-top: 50px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(52, 252, 255);
+        font-size: 60px;
+    }
+
+    #txt1 {
+        text-align: center;
+        margin-top: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 0;
+        color: rgb(254, 100, 100);
+        font-size: 20px;
+    }
+
+    #btn1 {
+        margin: 10px auto;
+        background-color: rgb(254, 100, 100);
+        color: rgb(255, 255, 255);
+        width: 100%;
+        height: 40px;
+        border-radius: 25px;
+        border-width: 0px;
+        font-weight: 1000;
+        font-size: medium;
+    }
+
+    #btn2 {
+        background-color: rgb(87, 214, 87);
+        color: rgb(255, 255, 255);
+        width: 200px;
+        height: 70px;
+        border-radius: 25px;
+        border-width: 0px;
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    #btn2:hover {
+        background-color: rgb(87, 250, 87);
+        animation: spin 0.5s linear infinite;
+    }
+
+    #btn1:hover {
+        background-color: rgb(255, 255, 40);
+        color: rgb(254, 100, 100);
+        animation: shake 2s linear infinite;
+        animation-iteration-count: infinite;
+        transition: all .3s ease-in-out;
+    }
+
+    @keyframes shake {
+        0% {
+            transform: translate(1px, 1px) rotate(0deg);
+        }
+
+        10% {
+            transform: translate(-1px, -2px) rotate(-1deg);
+        }
+
+        20% {
+            transform: translate(-3px, 0px) rotate(1deg);
+        }
+
+        30% {
+            transform: translate(3px, 2px) rotate(0deg);
+        }
+
+        40% {
+            transform: translate(1px, -1px) rotate(1deg);
+        }
+
+        50% {
+            transform: translate(-1px, 2px) rotate(-1deg);
+        }
+
+        60% {
+            transform: translate(-3px, 1px) rotate(0deg);
+        }
+
+        70% {
+            transform: translate(3px, 1px) rotate(-1deg);
+        }
+
+        80% {
+            transform: translate(-1px, -1px) rotate(1deg);
+        }
+
+        90% {
+            transform: translate(1px, 2px) rotate(0deg);
+        }
+
+        100% {
+            transform: translate(1px, -2px) rotate(-1deg);
+        }
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
