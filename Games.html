@@ -1,32 +1,127 @@
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
 <head>
-  <title>Info</title>
-  <link rel="icon" type="image/x-icon" href="LightStudios.png">
-  <link rel="stylesheet" href="Games.css">
-  <div id="main">
-    <img id="img1" src="LightStudios.png" alt="Image!">
-    <h1>Light<br>Studios</h1> <a href="Downloads.html"><button id="btn1">Downloads</button></a> <button
-      id="btn1">Applications</button> <a href="Rules.html"><button id="btn1">Rules</button></a> <a
-      href="Games.html"><button id="btn5">Games</button></a> <a href="Info.html"><button id="btn1">Info</button></a> <a
-      href="Front.html"><button id="btn1">Main</button></a>
-  </div>
-  <h2>Games</h2>
-  <div class="center">
-    <img src="Obby.png" alt="Obby" id="img3">
-    <a href="https://www.roblox.com/games/3522352095/"><button id="btn2">Play</button></a>
-    <img src="EverCity.png" alt="EverCity" id="img3">
-    <a href="https://www.roblox.com/games/2359201139/"><button id="btn2">Play</button></a>
-    <img src="RobloxTemplate.png" alt="Survit" id="img3">
-    <a href="https://www.roblox.com/games/4495443238/"><button id="btn2">Play</button></a>
-    <img src="FireworksExploding.png" alt="Survit" id="img3">
-    <a href="https://www.roblox.com/games/12293014128/"><button id="btn2">Play</button></a>
-  </div>
-  </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="Images/Logo.jpg">
+    <link rel="stylesheet 1" href="CSS/Main.css">
+    <link rel="stylesheet 2" href="CSS/Games.css">
+
+    <script src="JavaScript/Main.js"></script>
+
+    <title>Games</title>
 </head>
-
 <body>
-</body>
+    <header class="background-header"></header>
+    
+    <div class="navbar">
+        <div class="logo">
+            <a href="Home.html"><img src="Images/Logo.png"></a>
+        </div>
 
+        <div class="logotext">
+            <a href="Home.html"><p>Mystic Constructions</p></a>
+        </div>
+
+        <div class="maintext">
+            <ul class="links">
+                <li><a href="Home.html" class="underline">Home</a></li>
+                <li><a href="About.html" class="underline">About</a></li>
+                <li><a href="Games.html"class="disabled">Games</a></li>
+                <li><a href="Rules.html" class="underline">Rules</a></li>
+                <li><a href="Support.html" class="underline">Support</a></li>
+                <li><a href="News.html" class="underline" id="news">News</a></li>
+            </ul>
+        </div>
+       <div class="button">
+        <a href="JoinUs.html" class="action_btn2">Join Us</a>
+        <a href="InWork.html" class="action_btn">Log in</a>
+       </div>
+        <button class="toggle_btn">☰</button>
+    </div>
+
+    <div class="dropdown_menu">
+        <li><a href="Home.html" class="underline">Home</a></li>
+        <li><a href="About.html" class="underline">About</a></li>
+        <li><a href="Games.html"class="disabled">Games</a></li>
+        <li><a href="Services.html" class="underline">Services</a></li>
+        <li><a href="Rules.html" class="underline">Rules</a></li>
+        <li><a href="News.html" class="underline" id="news">News</a></li>
+        <li><a href="JoinUs.html" class="action_btn2">Join Us</a></li>
+        <li><a href="InWork.html" class="action_btn">Log in</a></li>
+    </div>
+
+    <main>
+        <section id="main">
+            <br><br><br><br><br><br><br><br>
+            <h1>Our Games</h1>
+            <div class="card-container">
+                <div class="card">
+                    <img src="Images/PetsBay.png" alt="">
+                    <div class="card-content">
+                        <h3>Pets Bay</h3>
+                        <p>Welcome in Pets Bay! 🐾</p>
+                        <a href="" onclick="PetsBay()" class="btn-play">Play</a>
+                        <a href="InWork.html" class="btn">Watch Trailer</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Images/WonderWorld.png" alt="">
+                    <div class="card-content">
+                        <h3>Wonder World</h3>
+                        <p>Welcome in Wonder World 🏡 RP
+                            <br>
+                            <br>🐶 Adopt over 20+ cute pets!
+                            <br>📝 Complete Tasks to leveling up your pets so you can give them a wonderful trick! 
+                            <br>💫 Do Every 2 minutes a Wish at the Wishing well to get exclusive rewards!
+                            <br>💎 Join Every day for a Daily Reward!
+                            <br>🧑‍🍳 Work at the Pizza Job to get a reward!
+                            <br>🏝️ Explore a Wonderful World!
+                            … and more
+                            <br>
+                            <br>•|•————————————————————-•|•
+                            - There aren’t any updates at the moment! 
+                            <br>•|•————————————————————-•|•
+                            <br>
+                            <br>👍👍👍 LIKE & FOLLOW the game for more updates and rewards! 👍👍👍
+                            <br>
+                            <br>🍵 Join our Roblox Group to get updates about the upcoming game! 🍵
+                            <br>
+                            <br>Wonder World // Mystic Construction
+                            <br>
+                            <br>Tags 🏷️: Custom Pets , RP , Adopt & Hatch , Pets , My Custom Pets , Games , 🏡</p>
+                        <a href="" onclick="WonderWorld()" class="btn-play">Play</a>
+                        <a href="Error.html" class="btn">Watch Trailer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div class="social-container">
+        <img src="Images/Twitter.png" alt="" onclick="Twitter()" class="social">
+        <img src="Images/Discord.png" alt="" onclick="Discord()" class="social">
+    </div>
+    
+    <p class="copyright">© Copyright 2024 Mystic Consutrctions. All rights reserved.</p>
+
+    <script>
+        const toggleBtn = document.querySelector(".toggle_btn")
+        const dropDownMenu = document.querySelector(".dropdown_menu")
+        
+        toggleBtn.onclick = function () {
+
+            dropDownMenu.classList.toggle("open")
+            const isOpen = dropDownMenu.classList.contains("open")
+
+            if (isOpen)
+            {
+                toggleBtn.innerHTML = "➤"
+            } else
+            {
+                toggleBtn.innerHTML = "☰"
+            }
+        }
+    </script>
+</body>
 </html>

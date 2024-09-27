@@ -1,10 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
     background-color: #000;
     background-size: cover;
     background-position: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?cs=srgb&dl=pexels-stywo-1054218.jpg&fm=jpg);
+    background-image: url("../Images/Background.png");
 }
 
 body::-webkit-scrollbar {
@@ -25,12 +33,11 @@ a {
 .background-header {
     position: fixed;
     top: 0;
-    left: -10;
-    width: 102%;
+    left: 0;
+    width: 100vw;
     height: 60px;
     background-color: rgba(0, 0, 0, 0.75);
     z-index: 1;
-    margin-top: -10px;
 }
 
 .maintext {
@@ -48,13 +55,15 @@ a {
 .navbar {
     font-weight: bold;
     z-index: 3;
-    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 40px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    vertical-align: middle;
+    padding: 0 10px;
 }
 
 .logotext {
@@ -241,8 +250,11 @@ a {
 .copyright {
     color: white;
     font-weight: bold;
-    margin-left: 10px;
+    text-align: center; /* Center the text */
+    margin: 20px auto; /* Add top/bottom margin and auto for horizontal centering */
+    width: 100%; /* Ensure it takes the full width */
 }
+
 
 /* Mobile Friendly */
 

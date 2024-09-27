@@ -8,20 +8,23 @@ section#main {
 }
 
 #main h1 {
-    color: #db4a4a;
-    margin-top: 250px;
+    color: orange;
+    margin-top: 175px;
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 #main h2 {
-    color: #db4a4a;
-}
-
-#main h3 {
-    margin-top: 250px;
-}
-
-#main p {
+    color: black;
     font-style: italic;
+    font-weight: bold;
+}
+
+#main hr {
+    border: none;
+    width: 550px;
+    height: 5px;
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }

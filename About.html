@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="Images/Logo.png">
+    <link rel="stylesheet 1" href="CSS/Main.css">
+    <link rel="stylesheet 2" href="CSS/About.css">
+
+    <script src="JavaScript/Main.js"></script>
+
+    <title>About</title>
+</head>
+<body>
+    <header class="background-header"></header>
+    
+    <div class="navbar">
+        <div class="logo">
+            <a href="Hjem.html"><img src="Images/Logo.png"></a>
+        </div>
+        
+        <div class="logotext">
+            <a href="Hjem.html"><p>Mystic Constructions</p></a>
+        </div>
+
+        <div class="maintext">
+            <ul class="links">
+                <li><a href="Home.html" class="underline">Home</a></li>
+                <li><a href="About.html" class="disabled">About</a></li>
+                <li><a href="Games.html" class="underline">Games</a></li>
+                <li><a href="Rules.html" class="underline">Rules</a></li>
+                <li><a href="Contact.html" class="underline">Contact</a></li>
+                <li><a href="News.html" class="underline" id="news">News</a></li>
+            </ul>
+        </div>
+       <div class="button">
+        <a href="JoinUs.html" class="action_btn2">Join Us</a>
+        <a href="InWork.html" class="action_btn">Login</a>
+       </div>
+        <button class="toggle_btn">☰</button>
+    </div>
+
+    <div class="dropdown_menu">
+        <li><a href="Home.html" class="underline">Home</a></li>
+        <li><a href="About.html" class="disabled">About</a></li>
+        <li><a href="Games.html" class="underline">Games</a></li>
+        <li><a href="Rules.html" class="underline">Rules</a></li>
+        <li><a href="Contact.html" class="underline">Contact</a></li>
+        <li><a href="News.html" class="underline" id="news">News</a></li>
+        <li><a href="JoinUs.html" class="action_btn2">Join Us</a></li>
+        <li><a href="InWork.html" class="action_btn">Login</a></li>
+    </div>
+
+    <main>
+        <section id="main">
+            <h1>About Us</h1>
+            <h5><strong>We are a game studio. Working hard to make good roleplay games with high quality assets.
+            </strong>
+        </h5>
+            <h1>Ofte stilte spørsmål</h1>
+            <div class="box">
+                <h2>When is the next game realising?</h2>
+                <p>The next game is realising in <strong>23-24 october</strong>.</p>
+                <br>
+            </div>
+
+            <div class="box">
+                <h2>What is the next game called?</h2>
+                <p>Our next game will be called <strong>"Wonder World"</strong>.</p>
+                <br>
+            </div>
+        </section>
+    </main>
+
+    <div class="social-container">
+        <img src="Images/Twitter.png" alt="" onclick="Twitter()" class="social">
+        <img src="Images/Discord.png" alt="" onclick="Discord()" class="social">
+    </div>
+    <p class="copyright">© Copyright 2024 Mystic Consutrctions. All rights reserved.</p>
+
+    <script>
+        const toggleBtn = document.querySelector(".toggle_btn")
+        const dropDownMenu = document.querySelector(".dropdown_menu")
+        
+        toggleBtn.onclick = function () {
+
+            dropDownMenu.classList.toggle("open")
+            const isOpen = dropDownMenu.classList.contains("open")
+
+            if (isOpen)
+            {
+                toggleBtn.innerHTML = "➤"
+            } else
+            {
+                toggleBtn.innerHTML = "☰"
+            }
+        }
+    </script>
+</body>
+</html>

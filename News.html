@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="Images/Logo.png">
+    <link rel="stylesheet 1" href="CSS/Main.css">
+    <link rel="stylesheet 2" href="CSS/News.css">
+
+    <script src="JavaScript/Main.js"></script>
+
+    <title>News</title>
+</head>
+<body>
+    <header class="background-header"></header>
+    
+    <div class="navbar">
+        <div class="logo">
+            <a href="Hjem.html"><img src="Images/Logo.png"></a>
+        </div>
+        
+        <div class="logotext">
+            <a href="Hjem.html"><p>Mystic Constructions</p></a>
+        </div>
+
+        <div class="maintext">
+            <ul class="links">
+                <li><a href="Home.html" class="underline">Home</a></li>
+                <li><a href="About.html" class="underline">About</a></li>
+                <li><a href="Games.html" class="underline">Games</a></li>
+                <li><a href="Rules.html" class="underline">Rules</a></li>
+                <li><a href="Contact.html" class="underline">Contact</a></li>
+                <li><a href="News.html" class="disabled" id="news">News</a></li>
+            </ul>
+        </div>
+       <div class="button">
+        <a href="JoinUs.html" class="action_btn2">Join Us</a>
+        <a href="InWork.html" class="action_btn">Login</a>
+       </div>
+        <button class="toggle_btn">☰</button>
+    </div>
+
+    <div class="dropdown_menu">
+        <li><a href="Home.html" class="underline">Home</a></li>
+        <li><a href="About.html" class="underline">About</a></li>
+        <li><a href="Games.html" class="underline">Games</a></li>
+        <li><a href="Rules.html" class="underline">Rules</a></li>
+        <li><a href="Contact.html" class="underline">Contact</a></li>
+        <li><a href="News.html" class="disabled" id="news">News</a></li>
+        <li><a href="JoinUs.html" class="action_btn2">Join Us</a></li>
+        <li><a href="InWork.html" class="action_btn">Login</a></li>
+    </div>
+
+    <main>
+        <section id="main">
+            <h1>⚠️ NEWS ⚠️</h1>
+            <hr>
+            <h2>Here are all the news as of today! 😊</h2>
+        </section>        
+    </main>
+
+    <div class="twitter-container">
+        <blockquote class="twitter-tweet">
+            &mdash; Mystic Construction (@MysticConst_RLX) 
+            <a href="https://twitter.com/MysticConst_RLX/status/1832913122052444369?ref_src=twsrc%5Etfw"></a>
+        </blockquote>
+        <blockquote class="twitter-tweet">
+            &mdash; Mystic Construction (@MysticConst_RLX) 
+            <a href="https://twitter.com/MysticConst_RLX/status/1835453211597209708?ref_src=twsrc%5Etfw"></a>
+        </blockquote>
+        <blockquote class="twitter-tweet">
+            &mdash; Mystic Construction (@MysticConst_RLX) 
+            <a href="https://twitter.com/MysticConst_RLX/status/1835829116592902317?ref_src=twsrc%5Etfw"></a>
+        </blockquote>
+    </div>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
+    <div class="social-container">
+        <img src="Images/Twitter.png" alt="" onclick="Twitter()" class="social">
+        <img src="Images/Discord.png" alt="" onclick="Discord()" class="social">
+    </div>
+    <p class="copyright">© Copyright 2024 Mystic Consutrctions. All rights reserved.</p>
+
+    <script>
+        const toggleBtn = document.querySelector(".toggle_btn")
+        const dropDownMenu = document.querySelector(".dropdown_menu")
+        
+        toggleBtn.onclick = function () {
+
+            dropDownMenu.classList.toggle("open")
+            const isOpen = dropDownMenu.classList.contains("open")
+
+            if (isOpen)
+            {
+                toggleBtn.innerHTML = "➤"
+            } else
+            {
+                toggleBtn.innerHTML = "☰"
+            }
+        }
+    </script>
+</body>
+</html>

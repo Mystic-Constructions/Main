@@ -1,0 +1,99 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    min-height: 300px; /* Set a minimum height for the card */
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 25px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-content {
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Change this to align items to the top */
+    height: 100%; /* Ensure the card takes full height */
+}
+
+.card-content .btn {
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #575757;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    color: #fff;
+    transition: .2s ease;
+}
+
+.card-content .btn:hover {
+    scale: 1.05;
+    background-color: #383838;
+}
+
+.card-content .btn:active {
+    scale: 0.95;
+}
+
+.card-content .btn-play {
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #73e269;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    color: #fff;
+    transition: .2s ease;
+}
+
+.card-content .btn-play:hover {
+    scale: 1.05;
+    background-color: #489941;
+}
+
+.card-content .btn-play:active {
+    scale: 0.95;
+}
+
+.card-content h3 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 10px; /* Space between heading and paragraph */
+}
+
+.card-content p {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 0; /* Remove margin above the paragraph */
+    margin-bottom: auto; /* Push the buttons to the bottom */
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: -50px;
+    color: #4aa8c5; /* Set the main text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+    font-weight: bold; /* Make the text bold for emphasis */
+    text-align: center; /* Center the text */
+}

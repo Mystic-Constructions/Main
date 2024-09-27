@@ -1,31 +1,37 @@
 function YouTube() {
-    window.open("https://www.youtube.com/@VinterstadenRP-sn6sj")
+    window.open("")
 }
 
 function Discord() {
-    window.open("https://discord.gg/yTEuW8FcFR")
+    window.open("https://discord.gg/QsTVcpG2Tj")
 }
 
 function TikTok() {
-    window.open("https://www.tiktok.com/@vinterstadenrp")
+    window.open("")
 }
 
+function Twitter() {
+    window.open("https://x.com/MysticConst_RLX")
+}
+
+
 function Join() {
-    window.open("https://www.roblox.com/groups/3812713/LightStudios#!/about")
+    window.open("https://www.roblox.com/groups/32011927/Mystic-Construction#!/about")
+}
+
+function PetsBay() {
+    window.open("https://www.roblox.com/games/17458909777/Pets-Bay")
+}
+
+function WonderWorld() {
+    window.open("https://www.roblox.com/games/17536932840/Wonder-World-RP")
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     // Array med bakgrunnsbilder
     const backgrounds = [
-        'images/image1.png',
-        'images/image2.png',
-        'images/image3.png',
-        'images/image4.png',
-        'images/image5.png',
-        'images/image6.png',
-        'images/image7.png',
-        'images/image8.png',
-        'images/image9.png'
+        'images/Background1.png',
+        'images/Background2.png'
     ];
 
     // Forhåndslaste alle bakgrunnsbilder

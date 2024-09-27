@@ -1,0 +1,112 @@
+.service-wrapper {
+    padding: 5% 8%;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #4aa8c5; /* Set the main text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+    font-weight: bold; /* Make the text bold for emphasis */
+    text-align: center; /* Center the text */
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Reduced gap */
+    margin-top: 20px; /* Reduced margin-top */
+    text-align: center;
+}
+
+.card {
+    flex: 1 1 calc(100% - 10px); /* Adjusted flex basis to accommodate larger cards */
+    max-width: calc(100% - 10px); /* Limit card width to fit larger size */
+    background-color: rgba(28, 35, 53, 1);
+    padding: 5%; /* Increased padding for larger cards */
+    border: 0.2px solid rgba(114, 226, 174, .2);
+    border-radius: 8px;
+    transition: 6s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px; /* Reduced margin-bottom */
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: 150%;
+    left: -100%;
+    width: 200%;
+    transform: rotate(45deg);
+    background-color: #fff;
+    height: 18px;
+    filter: blur(50px);
+    opacity: .5;
+    transition: 2s;
+    margin-top: 100px;
+}
+
+.card:hover::after {
+    width: 400%;
+    top: -100%;
+}
+
+.card h2 {
+    color: wheat;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.card p {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    margin: 12px 0;
+    color: rgba(255, 255, 255, .6);
+    transition: .6s;
+}
+
+.card:hover {
+    background-color: rgba(28, 35, 53, .75);
+    transform: translateY(-8px);
+    border-color: #1c2335;
+}
+
+.card:hover p {
+    color: white;
+}
+
+@media screen and (max-width: 1200px) {
+    .cards {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        flex: 1 1 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+}

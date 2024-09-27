@@ -17,19 +17,33 @@ body {
 }
 
 #main h1 {
+    font-size: 3rem; /* Maintain the original font size */
+    color: #4aa8c5; /* Set the main text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+    font-weight: bold; /* Make the text bold for emphasis */
+    text-align: center; /* Center the text */
     margin-top: 150px;
-    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 #main p {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     line-height: 1.6; /* Bedre lesbarhet */
     margin: 0 0 1.5rem; /* Avstand mellom paragraf og andre elementer */
     max-width: 800px; /* Begrense maksimal bredde på paragrafen */
     margin-left: auto; /* Sentrere teksten horisontalt */
     margin-right: auto; /* Sentrere teksten horisontalt */
     color: white; /* Endre fargen på teksten for bedre lesbarhet */
+}
+
+#main h5 {
+    font-size: 2rem; /* Adjust size for better visibility */
+    font-weight: bold; /* Make the text bold */
+    color: #4aa8c5; /* Main text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+    letter-spacing: 0.05em; /* Slightly increase spacing between letters */
+    text-align: center; /* Center the text */
+    margin: 20px 0; /* Add margin for spacing */
 }
 
 /* Box Styling */
