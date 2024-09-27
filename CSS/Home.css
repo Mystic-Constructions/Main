@@ -49,8 +49,8 @@ h1 {
 }
 
 .join {
-    width: 300px;
-    height: 100px;
+    width: 50%;
+    height: 15%;
     border-color: #5db354;
     border-style: solid;
     border-radius: 10px;
@@ -58,8 +58,11 @@ h1 {
     transition: .2s ease;
     font-weight: bold;
     color: #fff;
-    font-size: 50px;
-    margin-top: 50px;
+    font-size: 75px;
+    margin: 250px auto; /* Ensures it's centered and spaced below the top text */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers text inside */
 }
 
 .join:hover {
@@ -72,15 +75,16 @@ h1 {
     scale: 0.8;
 }
 
+
 /* Countdown styling updates */
 .countdown-container {
-    margin-top: 500px;
+    margin-top: 200px;
     text-align: center;
     color: #fff;
 }
 
 .countdown {
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     font-size: 2.5rem; /* Adjusted to fit better */
