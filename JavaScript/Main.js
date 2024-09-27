@@ -30,9 +30,9 @@ function WonderWorld() {
 document.addEventListener("DOMContentLoaded", function() {
     // Array med bakgrunnsbilder
     const backgrounds = [
-        '/Images/Background1.png',
-        '/Images/Background2.png'
-    ];
+        '../Images/Background1.png',
+        '../Images/Background2.png'
+    ];    
 
     // Forhåndslaste alle bakgrunnsbilder
     backgrounds.forEach(function(image) {
