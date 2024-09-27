@@ -26,3 +26,23 @@ function PetsBay() {
 function WonderWorld() {
     window.open("https://www.roblox.com/games/17536932840/Wonder-World-RP")
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Array med bakgrunnsbilder
+    const backgrounds = [
+        '../Images/Background1.png',
+        '../Images/Background2.png'
+    ];    
+
+    // Forhåndslaste alle bakgrunnsbilder
+    backgrounds.forEach(function(image) {
+        const img = new Image();
+        img.src = image;
+    });
+
+    // Velg et tilfeldig bilde fra arrayen
+    const randomIndex = Math.floor(Math.random() * backgrounds.length);
+
+    // Sett bakgrunnsbildet på body-elementet
+    document.body.style.backgroundImage = `url(${backgrounds[randomIndex]})`;
+});
