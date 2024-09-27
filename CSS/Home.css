@@ -1,3 +1,4 @@
+/* Main section styling */
 section#main {
     height: calc(100vh - 50vh);
     display: flex;
@@ -5,52 +6,35 @@ section#main {
     align-items: center;
     text-align: center;
     color: #fff;
+    padding: 20px; /* Added padding for mobile */
 }
 
-#main h1 {
-    margin-top: 250px;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-size: 3rem; /* Maintain the original font size */
-    color: #4aa8c5; /* Set the main text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
-    font-weight: bold; /* Make the text bold for emphasis */
-    text-align: center; /* Center the text */
-}
-
+/* Heading styling */
+#main h1,
 h1 {
     margin-top: 250px;
-    font-size: 3rem;
+    font-size: 5vh; /* Scales with viewport height */
     margin-bottom: 1rem;
-    font-size: 3rem; /* Maintain the original font size */
-    color: #4aa8c5; /* Set the main text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
-    font-weight: bold; /* Make the text bold for emphasis */
-    text-align: center; /* Center the text */
+    color: #4aa8c5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    text-align: center;
 }
 
+/* Paragraph styling */
 #main p {
-    font-size: 1.8rem;
+    font-size: 3vh; /* Scales with viewport height */
     font-style: italic;
-    font-size: 1.5rem; /* Maintain the original font size */
-    color: #4aa8c5; /* Set the main text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
-    font-weight: bold; /* Make the text bold for emphasis */
-    text-align: center; /* Center the text */
+    color: #4aa8c5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    text-align: center;
 }
 
-#main hr {
-    border: none;
-    width: 550px;
-    height: 5px;
-    background-color: #7fcaec;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
+/* Join button styling */
 .join {
-    width: 50%;
-    height: 15%;
+    width: 40vh; /* Responsive width */
+    height: 10vh; /* Responsive height */
     border-color: #5db354;
     border-style: solid;
     border-radius: 10px;
@@ -58,11 +42,11 @@ h1 {
     transition: .2s ease;
     font-weight: bold;
     color: #fff;
-    font-size: 75px;
-    margin: 250px auto; /* Ensures it's centered and spaced below the top text */
+    font-size: 6vh; /* Responsive font size */
+    margin: 250px auto; /* Centered and spaced below the top text */
     display: flex;
     justify-content: center;
-    align-items: center; /* Centers text inside */
+    align-items: center;
 }
 
 .join:hover {
@@ -73,14 +57,6 @@ h1 {
 
 .join:active {
     scale: 0.8;
-}
-
-
-/* Countdown styling updates */
-.countdown-container {
-    margin-top: 200px;
-    text-align: center;
-    color: #fff;
 }
 
 .countdown {
@@ -98,20 +74,49 @@ h1 {
 
 .time-unit span {
     display: block;
-    font-size: 3rem;
+    font-size: 5vh;
     font-weight: bold;
-    color: #4aa8c5; /* Matches your text stroke color */
+    color: #4aa8c5;
 }
 
 .label {
     font-size: 1.2rem;
-    color: #4aa8c5; /* Set the main text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
-    font-weight: bold; /* Make the text bold for emphasis */
-    text-align: center; /* Center the text */
+    color: #4aa8c5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    text-align: center;
 }
 
 /* Add spacing below the countdown */
 .countdown-container {
     margin-bottom: 20px;
+}
+
+/* Mobile Friendly Styles */
+@media (max-width: 750px) {
+    .join {
+        margin-top: 40vh;
+    }
+
+    .countdown {
+       font-size: small;
+    }
+
+    .time-unit span {
+        font-size: 4vh;
+     }
+}
+
+@media (max-width: 600px) {
+    .join {
+        margin-top: 50vh;
+    }
+
+    .countdown {
+        font-size: small;
+    }
+
+    .time-unit span {
+        font-size: 3vh;
+     }
 }
