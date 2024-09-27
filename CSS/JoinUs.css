@@ -11,3 +11,24 @@ section#main {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800vh; /* Full height of the viewport */
+}
+
+section {
+    text-align: center;
+    width: 100%; /* Full width */
+    max-width: 800px; /* Optional: set a maximum width for the section */
+    padding: 20px; /* Optional: add some padding */
+}
+
+iframe {
+    width: 100%; /* Set width to 100% of its container */
+    height: 790vh; /* Set height to 80% of the viewport height */
+    border: none; /* Remove border */
+    background-color: transparent; /* Ensure iframe has no background */
+}

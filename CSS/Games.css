@@ -8,7 +8,7 @@
 .card {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 25%;
     min-height: 300px; /* Set a minimum height for the card */
     background-color: rgba(0, 0, 0, 0.75);
     border-radius: 10px;
@@ -96,4 +96,16 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
     font-weight: bold; /* Make the text bold for emphasis */
     text-align: center; /* Center the text */
+}
+
+@media (max-width: 992px) {
+    .card {
+        width: 60%;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 90%;
+    }
 }
