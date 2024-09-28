@@ -1,7 +1,7 @@
 // Function to show the input container after 10 seconds
 setTimeout(() => {
     const inputContainer = document.getElementById('discordInputContainer');
-    const buttonClicked = localStorage.getItem('buttonClicked1');
+    const buttonClicked = localStorage.getItem('buttonClicked');
 
     // Check if the button has not been clicked yet
     if (!buttonClicked) {
@@ -25,7 +25,7 @@ function sendUsername() {
     .then(response => {
         if (response.ok) {
             alert('You have received a "Verified" role in our discord!');
-            localStorage.setItem('buttonClicked1', 'true'); // Save that the button was clicked
+            localStorage.setItem('buttonClicked', 'true'); // Save that the button was clicked
             document.getElementById('discordInputContainer').style.display = 'none'; // Hide the container
         } else {
             alert('Failed.');
