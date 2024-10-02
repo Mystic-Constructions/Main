@@ -16,7 +16,7 @@ const targetDate = new Date("October 23, 2024 00:00:00").getTime();
 
             if (timeLeft < 0) {
                 clearInterval(countdownInterval);
-                document.querySelector('.countdown').innerHTML = "Event has passed!";
+                document.querySelector('.countdown').innerHTML = "Released!";
             }
         }
 
