@@ -1,3 +1,4 @@
+/* General Styles */
 .service-wrapper {
     padding: 5% 8%;
 }
@@ -8,39 +9,40 @@
     align-items: center;
 }
 
+/* Title Styling */
 h1 {
     text-align: center;
     color: #fff; /* Set the main text color */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
     font-weight: bold; /* Make the text bold for emphasis */
-    text-align: center; /* Center the text */
     font-size: 3rem;
-    font-weight: bold;
 }
 
+/* Card Layout */
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px; /* Reduced gap */
-    margin-top: 20px; /* Reduced margin-top */
+    gap: 20px; /* Increased gap for better spacing */
+    margin-top: 20px;
     text-align: center;
 }
 
+/* Individual Card Styling */
 .card {
-    flex: 1 1 calc(100% - 10px); /* Adjusted flex basis to accommodate larger cards */
-    max-width: calc(100% - 10px); /* Limit card width to fit larger size */
+    flex: 1 1 calc(33% - 20px); /* Set three cards per row */
+    max-width: 33%;
     background-color: rgba(28, 35, 53, 1);
-    padding: 5%; /* Increased padding for larger cards */
+    padding: 5%;
     border: 0.2px solid rgba(114, 226, 174, .2);
     border-radius: 8px;
-    transition: 6s;
+    transition: 0.3s ease;
     display: flex;
     align-items: center;
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    margin-bottom: 20px; /* Reduced margin-bottom */
+    margin-bottom: 20px;
 }
 
 .card::after {
@@ -89,9 +91,44 @@ h1 {
     color: white;
 }
 
+/* Dropdown and Filter Styles */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.filters label {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.filters select {
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid rgba(114, 226, 174, .5);
+    background-color: rgba(28, 35, 53, .8);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.filters select:focus {
+    border-color: #72e2ae;
+    background-color: rgba(28, 35, 53, 1);
+}
+
+/* Responsive Styles */
 @media screen and (max-width: 1200px) {
     .cards {
         gap: 20px;
+    }
+    .card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row on medium screens */
+        max-width: 50%;
     }
 }
 
@@ -102,11 +139,20 @@ h1 {
     }
 
     .card {
-        flex: 1 1 calc(100% - 20px);
-        max-width: calc(100% - 20px);
+        flex: 1 1 calc(100% - 20px); /* Single column layout */
+        max-width: 100%;
     }
 
     h1 {
         font-size: 3.5rem;
+    }
+
+    .filters {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .filters select {
+        width: 100%;
     }
 }

@@ -11,7 +11,7 @@ section#main {
     margin-top: 15vh;
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #4aa8c5; /* Set the main text color */
+    color: #fff; /* Set the main text color */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
     font-weight: bold; /* Make the text bold for emphasis */
     text-align: center; /* Center the text */
@@ -37,7 +37,7 @@ section#main {
 
 .contact-left-title h2 {
     font-weight: 600;
-    color: #7fcaec;
+    color: #fff;
     font-size: 40px;
     margin-bottom: 5px;
 }
@@ -46,7 +46,7 @@ section#main {
     border: none;
     width: 120px;
     height: 5px;
-    background-color: #7fcaec;
+    background-color: #fff;
     border-radius: 10px;
     margin-bottom: 20px;
 }

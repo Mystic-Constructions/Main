@@ -8,7 +8,7 @@ section#main {
 }
 
 #main h1 {
-    color: red;
+    color: rgb(255, 91, 91);
     margin-top: 175px;
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -24,7 +24,7 @@ section#main {
     border: none;
     width: 550px;
     height: 5px;
-    background-color: black;
+    background-color: #fff;
     border-radius: 10px;
     margin-bottom: 20px;
 }

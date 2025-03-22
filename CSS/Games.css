@@ -36,7 +36,7 @@
     font-weight: bold;
     display: inline-block;
     padding: 8px 16px;
-    background-color: #575757;
+    background-color: #f47fff;
     text-decoration: none;
     border-radius: 5px;
     margin: 10px;
@@ -45,11 +45,32 @@
 }
 
 .card-content .btn:hover {
-    scale: 1.05;
-    background-color: #383838;
+    scale: 1.01;
+    background-color: #f049ff;
 }
 
 .card-content .btn:active {
+    scale: 0.95;
+}
+
+.card-content .btn2 {
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #ff8d8d;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    color: #fff;
+    transition: .2s ease;
+}
+
+.card-content .btn2:hover {
+    scale: 1.01;
+    background-color: #ff6565;
+}
+
+.card-content .btn2:active {
     scale: 0.95;
 }
 
@@ -66,8 +87,8 @@
 }
 
 .card-content .btn-play:hover {
-    scale: 1.05;
-    background-color: #489941;
+    scale: 1.01;
+    background-color: #4de03f;
 }
 
 .card-content .btn-play:active {
@@ -92,7 +113,7 @@ h1 {
     font-size: 3rem;
     text-align: center;
     margin-bottom: -50px;
-    color: #4aa8c5; /* Set the main text color */
+    color: #fff; /* Set the main text color */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
     font-weight: bold; /* Make the text bold for emphasis */
     text-align: center; /* Center the text */
