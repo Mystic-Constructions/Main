@@ -13,7 +13,7 @@
 
     <script type="module" src="JavaScript/TradeValues.js"></script>
     <script src="JavaScript/Main.js"></script>
-
+    
     <title>Trade Values</title>
 </head>
 <body>
@@ -40,6 +40,29 @@
         <button class="toggle_btn">☰</button>
     </div>
 
+    <main>
+        <section id="main">
+            <div class="container">
+                <div class="filters">
+                    <label for="category">Select Category:</label>
+                    <select id="category" onchange="loadItems()">
+                        <option value="pets" selected>Pets</option>
+                        <option value="toys">Toys</option>
+                    </select>
 
+                    <label for="tagFilter">Filter by Tag:</label>
+                    <select id="tagFilter" onchange="loadItems()">
+                        <option value="">All</option>
+                        <option value="halloween">Halloween</option>
+                        <option value="christmas">Christmas</option>
+                    </select>
+                </div>
+
+                <div class="cards" id="items-list">
+                    <!-- Items will be dynamically populated here -->
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
