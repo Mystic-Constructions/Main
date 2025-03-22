@@ -93,7 +93,7 @@ a {
 }
 
 .action_btn {
-    background-color: #38b7f1;
+    background-color: #6191c7;
     color: #fff;
     padding: 0.65rem 1.5rem;
     border: none;
@@ -108,7 +108,7 @@ a {
 
 .action_btn:hover {
     scale: 1.05;
-    background-color: #186a91;
+    background-color: #44658b;
 }
 
 .action_btn:active {
@@ -116,7 +116,7 @@ a {
 }
 
 .action_btn2 {
-    background-color: #02df83;
+    background-color: #72e2ae;
     color: #fff;
     padding: 0.65rem 1.5rem;
     border: none;
@@ -130,7 +130,7 @@ a {
 
 .action_btn2:hover {
     scale: 1.05;
-    background-color: #148657;
+    background-color: #499974;
 }
 
 .action_btn2:active {
@@ -293,7 +293,7 @@ a {
 
     .action_btn:hover {
         scale: 1.01;
-        background-color: #4cafdd;
+        background-color: #44658b;
     }
     
     .action_btn:active {
@@ -302,7 +302,7 @@ a {
 
     .action_btn2:hover {
         scale: 1.01;
-        background-color: #3de69f;
+        background-color: #499974;
     }
     
     .action_btn2:active {
