@@ -72,7 +72,7 @@ function displayItems(items, tagFilter) {
         
         // Create the card content with conditional display of tags
         let tagsDisplay = '';
-        if (tagFilter === 'All' && item.Tags && Array.isArray(item.Tags)) {
+        if (tagFilter === 'All' && item.Tags && Array.isArray(item.Tags) && item.Tags.length > 0) {
             tagsDisplay = `<p>Tags: ${item.Tags.join(', ')}</p>`;
         }
 
