@@ -40,12 +40,12 @@ function loadItems() {
             const filteredItems = [];
             for (let key in categoryData) {
                 const item = categoryData[key];
-                if (tagFilter === '' || (item.tags && item.tags.includes(tagFilter))) {
+                if (tagFilter === '' || tagFilter === 'All' || (item.Tags && item.Tags.includes(tagFilter))) {
                     filteredItems.push(item);
                 }
             }
 
-            displayItems(filteredItems);
+            displayItems(filteredItems, tagFilter);
         } else {
             console.log("No data available");
         }
@@ -54,7 +54,7 @@ function loadItems() {
     });
 }
 
-function displayItems(items) {
+function displayItems(items, tagFilter) {
     const itemsList = document.getElementById('items-list');
     itemsList.innerHTML = ''; // Clear current items
 
@@ -62,12 +62,18 @@ function displayItems(items) {
         const card = document.createElement('div');
         card.className = 'card';
         
+        // Create the card content with conditional display of tags
+        let tagsDisplay = '';
+        if (tagFilter === 'All') {
+            tagsDisplay = `<p>Tags: ${item.Tags.join(', ')}</p>`;
+        }
+
         card.innerHTML = `
             <h2>${item}</h2>  <!-- Display the item name -->
-            <p>Gems: ${item[itemName].Gems}</p>
-            <p>Coins: ${item[itemName].Coins}</p>
-            <p>Obtainable: ${item[itemName].Obtainable ? 'Yes' : 'No'}</p>
-            <p>Tags: ${item[itemName].Tags}</p>
+            <p>Gems: ${item.Gems}</p>
+            <p>Coins: ${item.Coins}</p>
+            <p>Obtainable: ${item.Obtainable ? 'Yes' : 'No'}</p>
+            ${tagsDisplay}  <!-- Conditionally display tags -->
         `;
 
         itemsList.appendChild(card);
