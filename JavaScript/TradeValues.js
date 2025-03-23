@@ -25,7 +25,7 @@ function loadItems() {
     const category = document.getElementById('category').value;
     const tagFilter = document.getElementById('tagFilter').value;
     
-    const dataRef = ref(realtimeDB, "Data/-OLtvQDPX6J6D2utk2-O"); // Bruker fast nøkkel
+    const dataRef = ref(realtimeDB, "Data/-OM2N2peS-ACaYvP3F0v"); // Bruker fast nøkkel
 
     get(dataRef).then((snapshot) => {
         if (snapshot.exists()) {
@@ -69,7 +69,7 @@ function displayItems(items, tagFilter) {
         }
 
         card.innerHTML = `
-            <h2>${item}</h2>  <!-- Display the item name -->
+            <h2>${item.Name}</h2>  <!-- Display the item name -->
             <p>Gems: ${item.Gems}</p>
             <p>Coins: ${item.Coins}</p>
             <p>Obtainable: ${item.Obtainable ? 'Yes' : 'No'}</p>

@@ -74,11 +74,11 @@ div a:hover {
     gap: 20px;
     margin-top: 20px;
     text-align: center;
-    width: 100%;
+    width: 90%; /* Ensure container takes up 90% of the screen width */
 }
 
 .card {
-    flex: 1 1 calc(90% - 20px); /* Ensure card takes up 90% of screen width */
+    flex: 1 1 90%; /* Set card to always take up 90% of the screen width */
     max-width: 90%; /* Ensure card doesn’t exceed 90% */
     background-color: rgba(28, 35, 53, 1);
     padding: 5%;
@@ -144,7 +144,7 @@ div a:hover {
 /* Responsive Styles */
 @media screen and (max-width: 1200px) {
     .card {
-        flex: 1 1 calc(90% - 20px); /* Still 90% on medium screens */
+        flex: 1 1 90%; /* Ensure 90% width on medium screens */
         max-width: 90%;
     }
 }
