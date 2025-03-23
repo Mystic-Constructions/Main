@@ -40,7 +40,7 @@ function loadItems() {
             const filteredItems = [];
             for (let key in categoryData) {
                 const item = categoryData[key];
-                if (tagFilter === '' || tagFilter === 'All' || (item.Tags && item.Tags.includes(tagFilter))) {
+                if (tagFilter === '' || tagFilter === 'All' || (item.tags && item.tags.includes(tagFilter))) {
                     filteredItems.push(item);
                 }
             }
