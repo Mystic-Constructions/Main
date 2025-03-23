@@ -23,17 +23,23 @@ const database = getDatabase(app); // Initialize the Realtime Database
 function loadItems() {
     const category = document.getElementById('category').value;
     const tagFilter = document.getElementById('tagFilter').value;
-    const itemsRef = ref(database, category); // Reference to either 'pets' or 'toys'
-
-    // Get data from Firebase
-    get(itemsRef).then((snapshot) => {
+    
+    const dataRef = ref(database, "Data"); // Referanse til hovednoden
+    
+    get(dataRef).then((snapshot) => {
         if (snapshot.exists()) {
-            const itemsList = snapshot.val();
-            const filteredItems = [];
+            const data = snapshot.val();
+            const firstKey = Object.keys(data)[0]; // Finn ID-en dynamisk
+            const categoryData = data[firstKey][category]; // Hent data under riktig kategori
 
-            for (let key in itemsList) {
-                const item = itemsList[key];
-                // Check if the item matches the tag filter
+            if (!categoryData) {
+                console.log("No data available for this category");
+                return;
+            }
+
+            const filteredItems = [];
+            for (let key in categoryData) {
+                const item = categoryData[key];
                 if (tagFilter === '' || item.tags.includes(tagFilter)) {
                     filteredItems.push(item);
                 }
@@ -66,5 +72,11 @@ function displayItems(items) {
     });
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("category").addEventListener("change", loadItems);
+    document.getElementById("tagFilter").addEventListener("change", loadItems);
+    loadItems(); // Kjør funksjonen ved start
+});
+
 // Load items initially
-loadItems();
+window.loadItems = loadItems;
