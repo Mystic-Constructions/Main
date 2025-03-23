@@ -61,12 +61,9 @@ function displayItems(items) {
     items.forEach((item, index) => {
         const card = document.createElement('div');
         card.className = 'card';
-
-        // Get the parent of the item (the key that holds the item)
-        const itemName = Object.keys(item)[0]; // This gets the first key of the object, e.g., "Item1" or "Item2"
         
         card.innerHTML = `
-            <h2>${itemName}</h2>  <!-- Display the item name -->
+            <h2>${item}</h2>  <!-- Display the item name -->
             <p>Gems: ${item[itemName].Gems}</p>
             <p>Coins: ${item[itemName].Coins}</p>
             <p>Obtainable: ${item[itemName].Obtainable ? 'Yes' : 'No'}</p>
