@@ -25,7 +25,7 @@ function loadItems() {
     const category = document.getElementById('category').value;
     const tagFilter = document.getElementById('tagFilter').value;
     
-    const dataRef = ref(database, "Data"); // Referanse til hovednoden
+    const dataRef = ref(realtimeDB, "Data"); // Referanse til hovednoden
     
     get(dataRef).then((snapshot) => {
         if (snapshot.exists()) {
