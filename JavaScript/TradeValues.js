@@ -25,23 +25,22 @@ function loadItems() {
     const category = document.getElementById('category').value;
     const tagFilter = document.getElementById('tagFilter').value;
     
-    const dataRef = ref(realtimeDB, "Data"); // Referanse til hovednoden
-    
+    const dataRef = ref(realtimeDB, "Data/-OLtvQDPX6J6D2utk2-O"); // Bruker fast nøkkel
+
     get(dataRef).then((snapshot) => {
         if (snapshot.exists()) {
             const data = snapshot.val();
-            const firstKey = Object.keys(data)[0]; // Finn ID-en dynamisk
-            const categoryData = data[firstKey][category]; // Hent data under riktig kategori
+            const categoryData = data[category]; // Hent data under riktig kategori
 
             if (!categoryData) {
-                console.log("No data available for this category");
+                console.log("No data available for this category:", category);
                 return;
             }
 
             const filteredItems = [];
             for (let key in categoryData) {
                 const item = categoryData[key];
-                if (tagFilter === '' || item.tags.includes(tagFilter)) {
+                if (tagFilter === '' || (item.tags && item.tags.includes(tagFilter))) {
                     filteredItems.push(item);
                 }
             }
