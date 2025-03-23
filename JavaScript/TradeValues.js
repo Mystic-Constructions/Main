@@ -1,6 +1,6 @@
 // Importer Firebase-moduler
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, get } from "firebase/database";  
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js";
 
 // Firebase-konfigurasjon
 const firebaseConfig = {
@@ -64,7 +64,7 @@ function displayItems(items) {
             <p>Gems: ${item.gems}</p>
             <p>Coins: ${item.coins}</p>
             <p>Obtainable: ${item.obtainable ? 'Yes' : 'No'}</p>
-            <p>Tags: ${item.tags.join(', ')}</p>
+            <p>Tags: ${Array.isArray(item.tags) ? item.tags.join(', ') : item.tags}</p>
         `;
         itemsList.appendChild(card);
     });
