@@ -1,6 +1,7 @@
-// Importer Firebase-moduler
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
-import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import { getFirestore, getDoc, doc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
 
 // Firebase-konfigurasjon
 const firebaseConfig = {
@@ -14,9 +15,11 @@ const firebaseConfig = {
   measurementId: "G-XC1ESTMZMF"
 };
 
-// Initialiser Firebase
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const database = getDatabase(app); // Bruk getDatabase() i stedet for firebase.database()
+const auth = getAuth();
+const db = getFirestore();
+const realtimeDB = getDatabase(app);  // Initialize Realtime Database
 
 function loadItems() {
     const category = document.getElementById('category').value;
