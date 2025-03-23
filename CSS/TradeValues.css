@@ -35,7 +35,7 @@ div a:hover {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(28, 35, 53, 1);
     padding: 15px 25px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -80,7 +80,7 @@ div a:hover {
 .card {
     flex: 1 1 calc(90% - 20px); /* Make card take up 90% of screen width */
     max-width: 90%; /* Ensure card doesn’t exceed 90% */
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(28, 35, 53, 1);
     padding: 5%;
     border: 0.2px solid rgba(114, 226, 174, .2);
     border-radius: 8px;
