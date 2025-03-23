@@ -1,9 +1,8 @@
-// Import the functions you need from the SDKs you need
+// Importer Firebase-moduler
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getDatabase, ref, get } from "firebase/database";  // Add Realtime Database imports
+import { getDatabase, ref, get } from "firebase/database";  
 
-// Your web app's Firebase configuration
+// Firebase-konfigurasjon
 const firebaseConfig = {
   apiKey: "AIzaSyBgfQNkEgo3s-MSlOiGTujbNyQUjTnf31Y",
   authDomain: "mystic-constructions.firebaseapp.com",
@@ -15,10 +14,9 @@ const firebaseConfig = {
   measurementId: "G-XC1ESTMZMF"
 };
 
-// Initialize Firebase
+// Initialiser Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const database = getDatabase(app); // Initialize the Realtime Database
+const database = getDatabase(app); // Bruk getDatabase() i stedet for firebase.database()
 
 function loadItems() {
     const category = document.getElementById('category').value;
@@ -72,11 +70,9 @@ function displayItems(items) {
     });
 }
 
+// Vent til dokumentet er lastet før event listeners legges til
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("category").addEventListener("change", loadItems);
     document.getElementById("tagFilter").addEventListener("change", loadItems);
     loadItems(); // Kjør funksjonen ved start
 });
-
-// Load items initially
-window.loadItems = loadItems;
