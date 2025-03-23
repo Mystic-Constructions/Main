@@ -24,6 +24,7 @@ const realtimeDB = getDatabase(app);  // Initialize Realtime Database
 function loadItems() {
     const category = document.getElementById('category').value;
     const tagFilter = document.getElementById('tagFilter').value;
+    const sortBy = document.getElementById('sortBy').value; // Get selected sort option
     
     const dataRef = ref(realtimeDB, "Data/-OM2N2peS-ACaYvP3F0v"); // Bruker fast nøkkel
 
@@ -40,9 +41,16 @@ function loadItems() {
             const filteredItems = [];
             for (let key in categoryData) {
                 const item = categoryData[key];
-                if (tagFilter === '' || tagFilter === 'All' || (item.Tags && item.Tags.includes(tagFilter))) {
+                if (tagFilter === 'All' || tagFilter === '' || (item.Tags && item.Tags.includes(tagFilter))) {
                     filteredItems.push(item);
                 }
+            }
+
+            // Sorting logic based on selected sort option
+            if (sortBy === 'Name') {
+                filteredItems.sort((a, b) => a.Name.localeCompare(b.Name)); // Sort by name A-Z
+            } else if (sortBy === 'Coins') {
+                filteredItems.sort((a, b) => b.Gems - a.Gems); // Sort by most valuable (Gems)
             }
 
             displayItems(filteredItems, tagFilter);
@@ -82,7 +90,11 @@ function displayItems(items, tagFilter) {
 
 // Vent til dokumentet er lastet før event listeners legges til
 document.addEventListener("DOMContentLoaded", () => {
+    // Set the default value of tagFilter to "All"
+    document.getElementById('tagFilter').value = 'All';
+    
     document.getElementById("category").addEventListener("change", loadItems);
     document.getElementById("tagFilter").addEventListener("change", loadItems);
+    document.getElementById("sortBy").addEventListener("change", loadItems);
     loadItems(); // Kjør funksjonen ved start
 });

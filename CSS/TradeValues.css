@@ -79,7 +79,6 @@ div a:hover {
 
 .card {
     flex: 1 1 90%; /* Set card to always take up 90% of the screen width */
-    max-width: 90%; /* Ensure card doesn’t exceed 90% */
     background-color: rgba(28, 35, 53, 1);
     padding: 5%;
     border: 0.2px solid rgba(114, 226, 174, .2);
@@ -141,25 +140,7 @@ div a:hover {
     color: white;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 1200px) {
-    .card {
-        flex: 1 1 90%; /* Ensure 90% width on medium screens */
-        max-width: 90%;
-    }
-}
-
 @media screen and (max-width: 900px) {
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        flex: 1 1 90%; /* Ensure 90% width on smaller screens */
-        max-width: 90%;
-    }
-
     .filters {
         flex-direction: column;
         gap: 20px;
