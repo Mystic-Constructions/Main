@@ -25,7 +25,7 @@ function loadItems() {
     const category = document.getElementById('category').value;
     const tagFilter = document.getElementById('tagFilter').value;
     
-    const dataRef = ref(realtimeDB, "/Data/-OM2N2peS-ACaYvP3F0v"); // Bruker fast nøkkel
+    const dataRef = ref(realtimeDB, "Data/-OM2N2peS-ACaYvP3F0v"); // Bruker fast nøkkel
 
     get(dataRef).then((snapshot) => {
         if (snapshot.exists()) {
@@ -64,12 +64,8 @@ function displayItems(items, tagFilter) {
         
         // Create the card content with conditional display of tags
         let tagsDisplay = '';
-        if (tagFilter === 'All') {
-            if (Array.isArray(item.Tags)) {  // Check if item.Tags is an array
-                tagsDisplay = `<p>Tags: ${item.Tags.join(', ')}</p>`;
-            } else {
-                tagsDisplay = '<p>Tags: No tags available</p>';
-            }
+        if (tagFilter === 'All' && item.Tags && Array.isArray(item.Tags)) {
+            tagsDisplay = `<p>Tags: ${item.Tags.join(', ')}</p>`;
         }
 
         card.innerHTML = `
