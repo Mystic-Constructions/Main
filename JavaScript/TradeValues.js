@@ -58,16 +58,21 @@ function displayItems(items) {
     const itemsList = document.getElementById('items-list');
     itemsList.innerHTML = ''; // Clear current items
 
-    items.forEach(item => {
+    items.forEach((item, index) => {
         const card = document.createElement('div');
         card.className = 'card';
+
+        // Get the parent of the item (the key that holds the item)
+        const itemName = Object.keys(item)[0]; // This gets the first key of the object, e.g., "Item1" or "Item2"
+        
         card.innerHTML = `
-        <h2>${JSON.stringify(item)}</h2>
-            <p>Gems: ${item.gems}</p>
-            <p>Coins: ${item.coins}</p>
-            <p>Obtainable: ${item.obtainable ? 'Yes' : 'No'}</p>
-            <p>Tags: ${Array.isArray(item.tags) ? item.tags.join(', ') : item.tags}</p>
+            <h2>${itemName}</h2>  <!-- Display the item name -->
+            <p>Gems: ${item[itemName].Gems}</p>
+            <p>Coins: ${item[itemName].Coins}</p>
+            <p>Obtainable: ${item[itemName].Obtainable ? 'Yes' : 'No'}</p>
+            <p>Tags: ${item[itemName].Tags}</p>
         `;
+
         itemsList.appendChild(card);
     });
 }
