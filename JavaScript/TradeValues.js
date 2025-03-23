@@ -40,7 +40,7 @@ function loadItems() {
             const filteredItems = [];
             for (let key in categoryData) {
                 const item = categoryData[key];
-                if (tagFilter === '' || tagFilter === 'All' || (item.tags && item.tags.includes(tagFilter))) {
+                if (tagFilter === '' || tagFilter === 'All' || (item.Tags && item.Tags.includes(tagFilter))) {
                     filteredItems.push(item);
                 }
             }
@@ -65,7 +65,7 @@ function displayItems(items, tagFilter) {
         // Create the card content with conditional display of tags
         let tagsDisplay = '';
         if (tagFilter === 'All') {
-            tagsDisplay = `<p>Tags: ${item.tags.join(', ')}</p>`;
+            tagsDisplay = `<p>Tags: ${item.Tags.join(', ')}</p>`;
         }
 
         card.innerHTML = `
