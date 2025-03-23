@@ -15,10 +15,11 @@ const firebaseConfig = {
   measurementId: "G-XC1ESTMZMF"
 };
 
-
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const db = getFirestore();
+const realtimeDB = getDatabase(app);  // Initialize Realtime Database
 
 // References to the HTML elements
 const categorySelect = document.getElementById('category');
@@ -34,7 +35,7 @@ let itemsData = {};
 // Fetch items data from Firebase
 function fetchItemsData() {
     const category = categorySelect.value;
-    const itemsRef = database.ref(`${category}`);
+    const itemsRef = realtimeDB.ref(`${category}`);
     itemsRef.once('value', (snapshot) => {
         itemsData = snapshot.val() || {};
         populateItemFilter();
@@ -86,7 +87,7 @@ function updateItemValues(itemName) {
         updatedValues[input.id] = input.value;
     });
 
-    const itemRef = database.ref(`${currentCategory}/${itemName}`);
+    const itemRef = realtimeDB.ref(`${currentCategory}/${itemName}`);
     itemRef.update(updatedValues, (error) => {
         if (error) {
             alert('Error updating item values.');
