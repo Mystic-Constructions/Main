@@ -62,7 +62,7 @@ function displayItems(items) {
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-            <h2>${item.name}</h2>
+        <h2>${JSON.stringify(item)}</h2>
             <p>Gems: ${item.gems}</p>
             <p>Coins: ${item.coins}</p>
             <p>Obtainable: ${item.obtainable ? 'Yes' : 'No'}</p>
