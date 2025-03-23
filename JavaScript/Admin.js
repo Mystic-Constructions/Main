@@ -110,4 +110,4 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/fireba
         });
 
         // Initialize on page load
-        fetchItemsData();  // Fetch items when page loads
+        fetchItemsData();  // Fetch items when page loadsg
