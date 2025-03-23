@@ -25,7 +25,7 @@ function loadItems() {
     const category = document.getElementById('category').value;
     const tagFilter = document.getElementById('tagFilter').value;
     
-    const dataRef = ref(realtimeDB, "Data/-OM2N2peS-ACaYvP3F0v"); // Bruker fast nøkkel
+    const dataRef = ref(realtimeDB, "/Data/-OM2N2peS-ACaYvP3F0v"); // Bruker fast nøkkel
 
     get(dataRef).then((snapshot) => {
         if (snapshot.exists()) {
