@@ -66,8 +66,6 @@ function displayItems(items) {
             <h2>${item}</h2>  <!-- Display the item name -->
             <p>Gems: ${item[itemName].Gems}</p>
             <p>Coins: ${item[itemName].Coins}</p>
-            <p>Obtainable: ${item[itemName].Obtainable ? 'Yes' : 'No'}</p>
-            <p>Tags: ${item[itemName].Tags}</p>
         `;
 
         itemsList.appendChild(card);
