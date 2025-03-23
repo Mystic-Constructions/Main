@@ -1,147 +1,52 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
     <link rel="icon" type="image/x-icon" href="Images/Top.png">
+    <link rel="stylesheet" href="CSS/TradeValues.css">
     <link rel="stylesheet 2" href="CSS/Main.css">
-    <link rel="stylesheet 2" href="CSS/Rules.css">
-
     <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
-
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>    
+    <script type="module" src="JavaScript/Admin.js"></script>
     <script src="JavaScript/Main.js"></script>
-    <script src="JavaScript/Rules.js"></script>
-
-    <title>Rules</title>
+    <title>Trade Values - Admin Panel</title>
 </head>
 <body>
-    <header class="background-header"></header>
-    
-    <div class="navbar">
-        <div class="logo">
-            <a href="Home.html"><img src="Images/Logo.png"></a>
-        </div>
-
-        <div class="maintext">
-            <ul class="links">
-                <li><a href="Home.html" class="underline">Home</a></li>
-                <li><a href="About.html" class="underline">About</a></li>
-                <li><a href="Games.html" class="underline">Games</a></li>
-                <li><a href="Rules.html" class="disabled">Rules</a></li>
-                <li><a href="Contact.html" class="underline">Contact</a></li>
-                <li><a href="News.html" class="underline" id="news">News</a></li>
-            </ul>
-        </div>
-       <div class="button">
-        <a href="JoinUs.html" class="action_btn2">Join Us</a>
-        <a href="InWork.html" class="action_btn">Login</a>
-       </div>
-        <button class="toggle_btn">☰</button>
-    </div>
-
-    <div class="dropdown_menu">
-        <li><a href="Home.html" class="underline">Home</a></li>
-        <li><a href="About.html" class="underline">About</a></li>
-        <li><a href="Games.html" class="underline">Games</a></li>
-        <li><a href="Rules.html" class="disabled">Rules</a></li>
-        <li><a href="Contact.html" class="underline">Contact</a></li>
-        <li><a href="News.html" class="underline" id="news">News</a></li>
-        <li><a href="JoinUs.html" class="action_btn2">Join Us</a></li>
-        <li><a href="InWork.html" class="action_btn">Login</a></li>
+    <!-- Back Button -->
+    <div style="padding: 20px;">
+        <a href="Games.html" >&lt; Back</a>
+        <a href="TradeValues.html" >&lt; Trade Values</a>
     </div>
 
     <main>
         <section id="main">
             <div class="container">
-                <div class="service-wrapper">
-                    <h1>Rules</h1>
-                    <div class="cards">
-                        <div class="card">
-                            <h2>§1 - Discord</h2>
-                            <p>
-                                §1.1 - Discord TOS<br>
-                                The Discord TOS must be followed at all times. A breach of the TOS will lead to a ban from the server and a report to the Discord moderation team.
-                                <br><br>§1.2 - Family Friendly<br>
-                                To have a wonderful community, please keep the server safe and family-friendly so all are welcome in our server!
-                                <br><br>§1.3 - Pinging<br>
-                                Please don’t ping higher roles like the <strong>@👑・Mystic Owners</strong> or the <strong>@🧰・Mystic Staff</strong> because we might be busy or working on our game projects. If you want to contact us, please open a ticket in our <strong>ticket</strong> channel.
-                                <br><br>§1.4 - Swearing<br>
-                                To keep our community server family-friendly, we need to communicate respectfully and kindly.
-                                <br><br>§1.5 - Leaking<br>
-                                Do not leak any sneak-peeks or information about our games/upcoming games or anything else unless you have permission to do so.
-                                <br><br>§1.6 - Spam<br>
-                                Spamming messages, images, or reactions is not allowed. Please keep the conversation meaningful.
-                                <br><br>§1.7 - Personal Information<br>
-                                Do not share personal information (yours or others’) in the server. Privacy is important for all members.
-                                <br><br>§1.8 - Promotion<br>
-                                No self-promotion or advertising of any kind is allowed without prior permission from the server staff.
-                                <br><br>§1.9 - Respect Staff Decisions<br>
-                                Always respect the decisions of the server staff. If you have a concern, address it politely and privately.
-                                <br><br>§1.10 - Content Sharing<br>
-                                Ensure that any content shared is appropriate and follows community guidelines. No NSFW or inappropriate material is allowed.
-                            </p>
-                            
-                        </div>
-                        <div class="card">
-                            <h2>§2 - Ingame</h2>
-                            <p>
-                                §2.1 - Selling<br>
-                                Do not sell any in-game items for Robux or real currency.
-                                <br><br>§2.2 - Respect Others<br>
-                                Treat all players with respect. Harassment, bullying, or hate speech will not be tolerated.
-                                <br><br>§2.3 - Cheating and Exploiting<br>
-                                Using cheats, hacks, or exploits to gain an unfair advantage is strictly prohibited.
-                                <br><br>§2.4 - Inappropriate Content<br>
-                                Do not post or share any inappropriate content, including but not limited to offensive language, images, or links.
-                                <br><br>§2.5 - AFK Players<br>
-                                Avoid using automated scripts or being AFK (Away From Keyboard) excessively in active gameplay areas.
-                                <br><br>§2.6 - Game Bugs<br>
-                                If you discover a bug or glitch, report it to the game developers rather than exploiting it for personal gain.
-                                <br><br>§2.7 - Account Sharing<br>
-                                Do not share your account information with others. Account sharing can lead to bans or losses.
-                                <br><br>§2.8 - Scamming<br>
-                                Scamming players is strictly prohibited. All trades must be fair and transparent.
-                                <br><br>§2.9 - Chat Restrictions<br>
-                                Use appropriate language in the game chat. Spamming or excessive self-promotion is not allowed.
-                                <br><br>§2.10 - Reporting Issues<br>
-                                If you experience any issues with other players or the game, please report them to the moderators.
-                                <br><br>§2.11 - Game-Specific Mechanics<br>
-                                Follow any additional rules related to specific game mechanics, as outlined in the game's instructions or description.
-                                <br><br>§2.12 - Event Participation<br>
-                                Players participating in events must follow the event-specific guidelines and rules.
-                            </p>
-                            
-                        </div>
+                <div class="filters">
+                    <label for="category">Select Category:</label>
+                    <select id="category">
+                        <option value="Pets" selected>Pets</option>
+                        <option value="Toys">Toys</option>
+                    </select>
+
+                    <label for="itemFilter">Select Item:</label>
+                    <select id="itemFilter">
+                        <!-- Dynamic items will be populated here -->
+                    </select>
+                </div>
+
+                <div id="itemDetails" style="display: none;">
+                    <h3>Item Details</h3>
+                    <div id="inputs">
+                        <!-- Inputs for editing the selected item will appear here -->
                     </div>
+                    <button id="updateButton">Update</button>
                 </div>
             </div>
         </section>
     </main>
 
-    <div class="social-container">
-        <img src="Images/Twitter.png" alt="" onclick="Twitter()" class="social">
-        <img src="Images/Discord.png" alt="" onclick="Discord()" class="social">
-    </div>
-
-    <p class="copyright">© Copyright 2024-2025 Mystic Consutrctions. All rights reserved.</p>
-
-    <script>
-        const toggleBtn = document.querySelector(".toggle_btn")
-        const dropDownMenu = document.querySelector(".dropdown_menu")
-        
-        toggleBtn.onclick = function () {
-
-            dropDownMenu.classList.toggle("open")
-            const isOpen = dropDownMenu.classList.contains("open")
-
-            if (isOpen)
-            {
-                toggleBtn.innerHTML = "➤"
-            } else
-            {
-                toggleBtn.innerHTML = "☰"
-            }
-        }
-    </script>
+    <script src="JavaScript/AdminPanel.js"></script>
 </body>
 </html>
